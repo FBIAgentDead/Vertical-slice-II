@@ -29,9 +29,17 @@ public class CharacterStats : MonoBehaviour {
 		{
 			if(canAttack){
 				characterPower.SpecialAttack();
-				mana =- 10;
+				mana -= 70;
 				canAttack = false;
 			}
+		}
+		if(Input.GetKeyDown(KeyCode.S)){
+            if (canAttack)
+            {
+                characterPower.MainAttack();
+                mana -= 20;
+                canAttack = false;
+            }
 		}
 		//Read all input and do the right behavior
 	}

@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aadde755440018148bdcdaded8640791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mana: 80
+  mana: 100
   health: 0
   canAttack: 0
   turnBlocked: 0
@@ -985,7 +985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aadde755440018148bdcdaded8640791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mana: 20
+  mana: 100
   health: 0
   canAttack: 0
   turnBlocked: 0

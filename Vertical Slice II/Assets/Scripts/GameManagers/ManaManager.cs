@@ -17,6 +17,7 @@ public class ManaManager : MonoBehaviour {
 			if(!players[1].canAttack)
 				SlideUp();
 		}
+		ChoosePlayer();
 	}
 
 	private void SlideUp()
@@ -25,6 +26,21 @@ public class ManaManager : MonoBehaviour {
         players[1].mana += Time.timeScale;
 		for(int i = 0; i < manaBars.Count; i++){
 			manaBars[i].value = players[i].mana;
+		}
+	}
+	private void ChoosePlayer(){
+		if(players[0].mana  >= 100 && players[1].mana >= 100){
+			int i = Random.Range(1,3); 
+			Debug.Log(i);
+			if(i == 1){
+				players[0].mana = 99;
+				players[0].canAttack = false;
+			}
+			else
+			{
+                players[1].mana = 99;
+                players[1].canAttack = false;
+			}
 		}
 	}
 	
