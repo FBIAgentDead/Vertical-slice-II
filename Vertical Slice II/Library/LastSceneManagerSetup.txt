@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/EasterEgg.unity
+- path: C:/Users/npeel/Desktop/Personal Projects/Slasher Game/Slasher/Slasher/Assets/Scenes/Main.unity
   isLoaded: 1
   isActive: 1
