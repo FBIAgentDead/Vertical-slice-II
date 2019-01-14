@@ -22,8 +22,8 @@ public class ManaManager : MonoBehaviour {
 
 	private void SlideUp()
 	{
-        players[0].mana += Time.timeScale;
-        players[1].mana += Time.timeScale;
+        players[0].mana += players[0].manaRegeneration/100;
+        players[1].mana += players[1].manaRegeneration/100;
 		for(int i = 0; i < manaBars.Count; i++){
 			manaBars[i].value = players[i].mana;
 		}
