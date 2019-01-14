@@ -1,22 +1,34 @@
 fileFormatVersion: 2
-guid: 0fb400b9fde6a724283f74737603fb35
+guid: 1142ff622aad5f947915ea68ed837264
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Loft_1
-    100004: Loft
+    100002: Gate_1
+    100004: Gate_2
+    100006: Ground
+    100008: Inner_Ring
     400000: //RootNode
-    400002: Loft_1
-    400004: Loft
-    2100000: Loft_1Mat
-    2100002: LoftMat
-    2300000: Loft_1
-    2300002: Loft
-    3300000: Loft_1
-    3300002: Loft
-    4300000: Loft_1
-    4300002: Loft
+    400002: Gate_1
+    400004: Gate_2
+    400006: Ground
+    400008: Inner_Ring
+    2100000: Gate_1Mat
+    2100002: Gate_2Mat
+    2100004: GroundMat
+    2100006: Inner_RingMat
+    2300000: Gate_1
+    2300002: Gate_2
+    2300004: Ground
+    2300006: Inner_Ring
+    3300000: Gate_1
+    3300002: Gate_2
+    3300004: Ground
+    3300006: Inner_Ring
+    4300000: Gate_1
+    4300002: Gate_2
+    4300004: Ground
+    4300006: Inner_Ring
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
