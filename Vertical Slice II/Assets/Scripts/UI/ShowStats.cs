@@ -10,11 +10,12 @@ public class ShowStats : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     void Start()
     {
+
     }
 
     void Update()
     {
-
+        
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -27,5 +28,6 @@ public class ShowStats : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         statUI.enabled = false;
 
         //particles poof
+
     }
 }
