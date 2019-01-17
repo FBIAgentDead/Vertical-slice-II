@@ -15,4 +15,8 @@ public class Pluto : MonoBehaviour, IAbilities {
         getStats.mana -= 70;
 	}
 
+    public void SelfBuf(){
+
+    }
+
 }
