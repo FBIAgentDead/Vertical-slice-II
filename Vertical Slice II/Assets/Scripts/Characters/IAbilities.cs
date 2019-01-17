@@ -2,4 +2,5 @@
 {
 	void SpecialAttack();
 	void MainAttack();
+	void SelfBuf();
 }
