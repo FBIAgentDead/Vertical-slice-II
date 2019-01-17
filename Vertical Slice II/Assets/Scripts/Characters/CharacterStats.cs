@@ -20,14 +20,15 @@ public class CharacterStats : MonoBehaviour {
 	private Button neutralAttack;
 	[SerializeField]
 	private Button selfBuff;
+	public List<Card> availableCards = new List<Card>();
 
 	void Start()
 	{
 		characterPower = gameObject.GetComponent<IAbilities>();
 		statistics = gameObject.GetComponent<CharacterStats>();
 		specialAttack.onClick.AddListener(characterPower.SpecialAttack);
-        neutralAttack.onClick.AddListener(characterPower.MainAttack);
-        selfBuff.onClick.AddListener(characterPower.SelfBuf);
+        // neutralAttack.onClick.AddListener(characterPower.MainAttack);
+        // selfBuff.onClick.AddListener(characterPower.SelfBuf);
 	}
 
 	void Update()
@@ -41,6 +42,10 @@ public class CharacterStats : MonoBehaviour {
 		healthBar.value = health;
 		if(health <= 0){
 			//GameOver
+		}
+		if(availableCards.Count < 5){
+			//Behavior when lower then 5
+			availableCards.Add(new Card());
 		}
 	}
 
