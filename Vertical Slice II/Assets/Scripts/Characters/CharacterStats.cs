@@ -1,47 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterStats : MonoBehaviour {
 
 	public float mana;
 	public float manaRegeneration;
 	public int health;
+	public Slider healthBar;
 	public bool canAttack;
 	public bool turnBlocked;
 	//this wil call the character powers
 	IAbilities characterPower;
-	CharacterStats a;
+	CharacterStats statistics;
+	[SerializeField]
+	private Button specialAttack;
+	[SerializeField]
+	private Button neutralAttack;
+	[SerializeField]
+	private Button selfBuff;
 
 	void Start()
 	{
 		characterPower = gameObject.GetComponent<IAbilities>();
-		a = gameObject.GetComponent<CharacterStats>();
+		statistics = gameObject.GetComponent<CharacterStats>();
+		specialAttack.onClick.AddListener(characterPower.SpecialAttack);
+        neutralAttack.onClick.AddListener(characterPower.MainAttack);
+        selfBuff.onClick.AddListener(characterPower.SelfBuf);
 	}
 
 	void Update()
 	{
-		ReadInput();
 		if(mana >= 100){
 			canAttack = true;
 		}
+		else{
+			canAttack = false;
+		}
+		healthBar.value = health;
+		if(health <= 0){
+			//GameOver
+		}
 	}
 
-	void ReadInput(){
-		if (Input.GetKeyDown(KeyCode.W))
-		{
-			if(canAttack){
-				characterPower.SpecialAttack();
-				canAttack = false;
-			}
-		}
-		if(Input.GetKeyDown(KeyCode.S)){
-            if (canAttack)
-            {
-                characterPower.MainAttack();
-                canAttack = false;
-            }
-		}
-		//Read all input and do the right behavior
-	}
 }
