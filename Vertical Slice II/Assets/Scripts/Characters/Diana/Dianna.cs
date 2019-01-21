@@ -9,18 +9,25 @@ public class Dianna : MonoBehaviour, IAbilities {
     public void SpecialAttack()
     {
         getStats = gameObject.GetComponent<CharacterStats>();
-        Debug.Log("SpecialAttack (Dianna)");
-        getStats.mana -= 30;
+        if(getStats.canAttack){
+            Debug.Log("SpecialAttack (Dianna)");
+            getStats.mana -= 30;
+        }
     }
     
     public void MainAttack()
     {
         getStats = gameObject.GetComponent<CharacterStats>();
-        Debug.Log("MainAttack (Dianna)");
-        getStats.mana -= 70;
+        if (getStats.canAttack){
+            Debug.Log("MainAttack (Dianna)");
+            getStats.mana -= 70;
+        }
     }
 
     public void SelfBuf(){
+        getStats = gameObject.GetComponent<CharacterStats>();
+        if(getStats.canAttack){
 
+        }
     }
 }

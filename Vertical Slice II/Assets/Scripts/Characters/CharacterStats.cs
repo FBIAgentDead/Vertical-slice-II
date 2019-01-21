@@ -27,8 +27,8 @@ public class CharacterStats : MonoBehaviour {
 		characterPower = gameObject.GetComponent<IAbilities>();
 		statistics = gameObject.GetComponent<CharacterStats>();
 		specialAttack.onClick.AddListener(characterPower.SpecialAttack);
-        // neutralAttack.onClick.AddListener(characterPower.MainAttack);
-        // selfBuff.onClick.AddListener(characterPower.SelfBuf);
+        neutralAttack.onClick.AddListener(characterPower.MainAttack);
+        selfBuff.onClick.AddListener(characterPower.SelfBuf);
 	}
 
 	void Update()
