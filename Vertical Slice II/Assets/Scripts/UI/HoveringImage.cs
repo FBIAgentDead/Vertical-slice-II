@@ -21,8 +21,18 @@ public class HoveringImage : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         SetImagePos();
     }
 
+    IEnumerator MoveImage()
+    {
+        while (statUI.enabled)
+        {
+            SetImagePos();
+            yield return null;
+        }
+    }
+
     private void SetImagePos()
     {
+        /*
         Vector2 movePos;
 
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
@@ -30,12 +40,16 @@ public class HoveringImage : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             Input.mousePosition, parentCanvas.worldCamera,
             out movePos);
 
-        statUI.transform.position = parentCanvas.transform.TransformPoint(movePos);
+        //statUI.transform.position = parentCanvas.transform.TransformPoint(movePos);
+    */
+        statUI.transform.position = Input.mousePosition;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        statUI.transform.position = eventData.position;
         statUI.enabled = true;
+        StartCoroutine(MoveImage());
     }
 
     public void OnPointerExit(PointerEventData eventData)
