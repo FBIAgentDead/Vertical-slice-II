@@ -42,7 +42,8 @@ public class HoveringImage : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
         //statUI.transform.position = parentCanvas.transform.TransformPoint(movePos);
     */
-        statUI.transform.position = Input.mousePosition;
+        Vector3 offset = new Vector3(50, 40, 0);
+        statUI.transform.position = Input.mousePosition + offset;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
