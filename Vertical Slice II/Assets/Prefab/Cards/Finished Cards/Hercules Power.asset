@@ -9,18 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d509b4c10598ce4ca3d480ac6721b0b, type: 3}
-  m_Name: Protection from above
+  m_Name: Hercules Power
   m_EditorClassIdentifier: 
-  cardName: Chronus Shield
-  description: This card wil shield the user for 1 turn.
-  manaCost: 80
+  cardName: Hercules Power
+  description: You're next attack wil not drain mana but you wil lose 10 health.
+  manaCost: 0
   damage: 0
-  heal: 10
+  heal: -10
   cardSprite: {fileID: 0}
   cardSpecial:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: b03fd204d35078b4ca3c3799e6fd7c77, type: 2}
+      - m_Target: {fileID: 11400000, guid: 69d1aa8305cd88444807e645f6c8e056, type: 2}
         m_MethodName: CardMove
         m_Mode: 1
         m_Arguments:

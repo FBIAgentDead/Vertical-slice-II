@@ -17,6 +17,7 @@ public class CardManager : MonoBehaviour {
 			thisStats.health += card[index].heal;
 			thisStats.damageBuff += card[index].damage;
 			thisStats.mana -= card[index].manaCost;
+			card[index].CardMove();
 		}
 	}
 
