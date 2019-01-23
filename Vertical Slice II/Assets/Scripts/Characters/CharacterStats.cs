@@ -21,6 +21,7 @@ public class CharacterStats : MonoBehaviour {
 	[SerializeField]
 	private Button selfBuff;
 	public List<Card> availableCards = new List<Card>();
+	public int damageBuff;
 
 	void Start()
 	{
@@ -42,10 +43,6 @@ public class CharacterStats : MonoBehaviour {
 		healthBar.value = health;
 		if(health <= 0){
 			//GameOver
-		}
-		if(availableCards.Count < 5){
-			//Behavior when lower then 5
-			availableCards.Add(new Card());
 		}
 	}
 
