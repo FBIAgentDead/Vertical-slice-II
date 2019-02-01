@@ -1788,7 +1788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card:
-  - {fileID: 11400000, guid: fd7d72c8a5e83c644af0c5e74ca1c508, type: 2}
+  - {fileID: 11400000, guid: 566ffe714bbd39a4585de5fe818cb943, type: 2}
   - {fileID: 11400000, guid: 566ffe714bbd39a4585de5fe818cb943, type: 2}
 --- !u!224 &1443017042
 RectTransform:
