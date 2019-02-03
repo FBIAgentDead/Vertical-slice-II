@@ -42,7 +42,7 @@ public class CharacterStats : MonoBehaviour {
 		}
 		healthBar.value = health;
 		if(health <= 0){
-			//GameOver
+            Application.LoadLevel(Application.loadedLevel);
 		}
 	}
 

@@ -7,11 +7,13 @@ public class Pluto : MonoBehaviour, IAbilities {
     Animator playAbilitie;
     public GameObject enemyObject;
     private Animator enemy;
+    private CharacterStats enemyStats;
 
     void Awake()
     {
         playAbilitie = GetComponentInChildren<Animator>();
         enemy = enemyObject.GetComponentInChildren<Animator>();
+        enemyStats = enemyObject.GetComponent<CharacterStats>();
     }
 
     public void SpecialAttack(){
@@ -19,6 +21,7 @@ public class Pluto : MonoBehaviour, IAbilities {
         if (getStats.canAttack){
             Debug.Log("SpecialAttack (Pluto)");
             getStats.mana -= 30;
+            enemyStats.health -= 20;
             playAbilitie.Play("AttackAnim");
             enemy.Play("SelfHeal");
         }
@@ -28,6 +31,7 @@ public class Pluto : MonoBehaviour, IAbilities {
         if(getStats.canAttack){
             Debug.Log("MainAttack (Pluto)");
             getStats.mana -= 70;
+            enemyStats.health -= 5;
             playAbilitie.Play("AttackAnim");
             enemy.Play("SelfHeal");
         }
